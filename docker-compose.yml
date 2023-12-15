@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nodejs-app:
+    image: nodejs:web
+    container_name: nodejs
+    ports:
+      - 80:80
+    volumes:
+      - nodejs-vol:/usr/share/nginx/html/
+
+volumes:
+  nodejs-vol:
+    external: true 
+    
